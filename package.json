@@ -1,0 +1,24 @@
+{
+  "name": "speed_nbc_group10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NSen29/SPEED_NBC_Group10.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NSen29/SPEED_NBC_Group10/issues"
+  },
+  "homepage": "https://github.com/NSen29/SPEED_NBC_Group10#readme",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "express": "^4.17.1",
+    "react-table": "^7.7.0"
+  }
+}
