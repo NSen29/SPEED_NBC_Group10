@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/NSen29/SPEED_NBC_Group10#readme",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.4",
     "express": "^4.17.1",
+    "material-table": "^1.69.3",
     "react-table": "^7.7.0"
   }
 }
