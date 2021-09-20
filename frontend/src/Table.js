@@ -9,8 +9,8 @@ export const Table = () => {
             source: "EASE",
             pubyear: "2014",
             doi: "https://doi.org/10.1145/2601248.2601267",
-            claim: "product quality improvement",
-            evidence: "weak support"
+            claim: "Product Quality Improvement",
+            evidence: "Weak Support"
 
         },
 
@@ -20,8 +20,8 @@ export const Table = () => {
             source: " Empirical Software Engineering, 13(3), 289–302",
             pubyear: "2008",
             doi: "https://doi.org/10.1007/s10664-008-9062-z",
-            claim: "product quality improvement",
-            evidence: "weak support"
+            claim: "Product Quality Improvement",
+            evidence: "Weak Support"
         },
 
         {
@@ -30,8 +30,8 @@ export const Table = () => {
             source: "Software, IEEE, 25(2) 77-84",
             pubyear: "2008",
             doi: "",
-            claim: "code quality improvement",
-            evidence: "strong support"
+            claim: "Code Quality Improvement",
+            evidence: "Strong Support"
         },
 
         {
@@ -40,8 +40,8 @@ export const Table = () => {
             source: "ArXiv.Org, cs.SE, arXiv:1711.05082-284",
             pubyear: "2017",
             doi: "",
-            claim: "code quality improvement",
-            evidence: "weak support"
+            claim: "Code Quality Improvement",
+            evidence: "Weak Support"
         },
 
         {
@@ -50,8 +50,8 @@ export const Table = () => {
             source: "IEEE Software, 23(6), 70–71.",
             pubyear: "2006",
             doi: "https://doi.org/10.1109/ms.2006.157",
-            claim: "code quality improvement",
-            evidence: "strong support"
+            claim: "Code Quality Improvement",
+            evidence: "Strong Support"
         },
 
         {
@@ -61,7 +61,7 @@ export const Table = () => {
             pubyear: "2001",
             doi: "https://doi.org/10.1109/issre.2003.1251029",
             claim: "Product Quality Improvement",
-            evidence: "strong support"
+            evidence: "Strong Support"
         },
 
         {
@@ -70,47 +70,74 @@ export const Table = () => {
             source: "WBMA, 1106(1), 11–24.",
             pubyear: "2019",
             doi: "https://doi.org/10.1007/978-3-030-36701-5_2",
-            claim: "code quality improvement",
-            evidence: "weak support"
+            claim: "Code Quality Improvement",
+            evidence: "Weak Support"
         },
     ]
 
     const columns = [{
-            title: 'Title',
-            field: 'title'
+            title: 'Title of Evidence',
+            field: 'title',
+            cellStyle: { background: "#9FDBED" },
+            headerStyles: { color: "#fff" },
         },
         {
-            title: 'Authors',
-            field: 'authors'
+            title: 'Authors of Evidence',
+            field: 'authors',
+            cellStyle: { background: "	#90EE90" },
+            headerStyles: { color: "#fff" }
         },
         {
-            title: 'Source',
-            field: 'source'
+            title: 'Source of Claim',
+            field: 'source',
+            cellStyle: { background: "#90EE90" },
+            headerStyles: { color: "#fff" }
+
         },
         {
-            title: 'Pubyear',
-            field: 'pubyear'
+            title: 'Year of Publication',
+            field: 'pubyear',
+            align: "center",
+            cellStyle: { background: "#90EE90" },
+            headerStyles: { color: "#fff" }
+
         },
         {
             title: 'DOI',
-            field: 'doi'
+            field: 'doi',
+            align: "center",
+            cellStyle: { background: "#90EE90" },
+            headerStyles: { color: "#fff" }
+
         },
         {
-            title: 'Claim',
-            field: 'claim'
+            title: 'Type of Claim',
+            field: 'claim',
+            cellStyle: { background: "#90EE90" },
+            headerStyles: { color: "#fff" }
+
         },
         {
-            title: 'Evidence',
-            field: 'evidence'
+            title: 'Rating of Evidence',
+            field: 'evidence',
+            cellStyle: { background: "#FD5740 " },
+            headerStyles: { color: "#fff" }
+
         }
 
     ]
 
-    return ( < div >
+    return ( <
+        div >
+
         <
-        MaterialTable title = "Material Table"
-        data = { data }
+        h1 align = "center" > SOFTWARE ENGINEERING PRACTICE < /h1>  <
+        h3 align = 'center' > Test Driven Development < /h3> <
+        MaterialTable data = { data }
         columns = { columns }
-        /> </div > )
+
+        /> < /
+        div >
+    )
 
 }
