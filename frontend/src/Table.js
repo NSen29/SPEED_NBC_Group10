@@ -10,7 +10,7 @@ export const Table = () => {
             pubyear: "2014",
             doi: "https://doi.org/10.1145/2601248.2601267",
             claim: "Product Quality Improvement",
-            evidence: "Weak Support"
+            evidence: "W"
 
         },
 
@@ -21,7 +21,7 @@ export const Table = () => {
             pubyear: "2008",
             doi: "https://doi.org/10.1007/s10664-008-9062-z",
             claim: "Product Quality Improvement",
-            evidence: "Weak Support"
+            evidence: "W"
         },
 
         {
@@ -31,7 +31,7 @@ export const Table = () => {
             pubyear: "2008",
             doi: "",
             claim: "Code Quality Improvement",
-            evidence: "Strong Support"
+            evidence: "S"
         },
 
         {
@@ -41,7 +41,7 @@ export const Table = () => {
             pubyear: "2017",
             doi: "",
             claim: "Code Quality Improvement",
-            evidence: "Weak Support"
+            evidence: "W"
         },
 
         {
@@ -51,7 +51,7 @@ export const Table = () => {
             pubyear: "2006",
             doi: "https://doi.org/10.1109/ms.2006.157",
             claim: "Code Quality Improvement",
-            evidence: "Strong Support"
+            evidence: "S"
         },
 
         {
@@ -61,7 +61,7 @@ export const Table = () => {
             pubyear: "2001",
             doi: "https://doi.org/10.1109/issre.2003.1251029",
             claim: "Product Quality Improvement",
-            evidence: "Strong Support"
+            evidence: "S"
         },
 
         {
@@ -71,7 +71,7 @@ export const Table = () => {
             pubyear: "2019",
             doi: "https://doi.org/10.1007/978-3-030-36701-5_2",
             claim: "Code Quality Improvement",
-            evidence: "Weak Support"
+            evidence: "W"
         },
     ]
 
@@ -120,6 +120,7 @@ export const Table = () => {
         {
             title: 'Rating of Evidence',
             field: 'evidence',
+            lookup: { S: "Strong Support", cellStyle: { background: "#FD5740 " }, W: "Weak Support", cellStyle: { background: "#90EE90" } },
             cellStyle: { background: "#FD5740 " },
             headerStyles: { color: "#fff" }
 
