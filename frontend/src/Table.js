@@ -149,7 +149,7 @@ const symbolsForOptions = {
                                                                                         field: 'title',
                                                                                         sorting: false,
                                                                                         cellStyle: { background: "#9FDBED" },
-                                                                                        headerStyles: { color: "#fff" },
+                                                                                        headerStyle: { color: "#fff" },
                                                                                     },
                                                                                     {
                                                                                         title: 'Authors of Evidence',
@@ -157,7 +157,7 @@ const symbolsForOptions = {
                                                                                         sorting: false,
 
                                                                                         cellStyle: { background: "	#90EE90" },
-                                                                                        headerStyles: { color: "#fff" }
+                                                                                        headerStyle: { color: "#fff" }
                                                                                     },
                                                                                     {
                                                                                         title: 'Source of Claim',
@@ -166,7 +166,7 @@ const symbolsForOptions = {
                                                                                         searching: false,
                                                                                         filtering: false,
                                                                                         cellStyle: { background: "#90EE90" },
-                                                                                        headerStyles: { color: "#fff" }
+                                                                                        headerStyle: { color: "#fff" }
 
                                                                                     },
                                                                                     {
@@ -176,7 +176,7 @@ const symbolsForOptions = {
                                                                                         SortArrow: 'arrow_upward',
                                                                                         defaultSort: "asc",
                                                                                         cellStyle: { background: "#90EE90" },
-                                                                                        headerStyles: { color: "#fff" }
+                                                                                        headerStyle: { color: "#fff", fontSize: 15 }
 
                                                                                     },
                                                                                     {
@@ -187,7 +187,7 @@ const symbolsForOptions = {
                                                                                         filtering: false,
                                                                                         align: "center",
                                                                                         cellStyle: { background: "#90EE90" },
-                                                                                        headerStyles: { color: "#fff" }
+                                                                                        headerStyle: { color: "#fff" }
 
                                                                                     },
                                                                                     {
@@ -198,7 +198,7 @@ const symbolsForOptions = {
                                                                                         align: "center",
                                                                                         lookup: { PQI: "Product Quality", CQI: "Code Quality" },
                                                                                         cellStyle: { background: "#90EE90" },
-                                                                                        headerStyles: { color: "#fff" }
+                                                                                        headerStyle: { color: "#fff" }
 
                                                                                     },
                                                                                     {
@@ -207,8 +207,9 @@ const symbolsForOptions = {
                                                                                         searching: false,
                                                                                         sorting: false,
                                                                                         lookup: { S: "Strong Support", W: "Weak Support" },
+
                                                                                         cellStyle: { background: "#FD5740 " },
-                                                                                        headerStyles: { color: "#fff" }
+                                                                                        headerStyle: { color: "#fff" }
 
                                                                                     }
 
@@ -228,7 +229,8 @@ const symbolsForOptions = {
                                                                                             search: true,
                                                                                             searchFieldAlignment: 'right',
                                                                                             searchAutoFocus: true,
-                                                                                            filtering: true
+                                                                                            filtering: true,
+                                                                                            headerStyle: { background: "#5885AF", fontStyle: "oblique", fontSize: 15 }
                                                                                         }
 
                                                                                     }
