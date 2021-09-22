@@ -290,7 +290,7 @@ const symbolsForOptions = {
                                                                                             rowStyle: {
                                                                                                 fontSize: 15,
                                                                                             },
-                                                                                            headerStyle: { background: "#5885AF", fontStyle: "oblique", fontSize: 15 }
+                                                                                            headerStyle: { background: "#003366", fontStyle: "oblique", fontSize: 15 }
                                                                                         }
 
                                                                                     }
