@@ -195,7 +195,7 @@ const symbolsForOptions = {
                                                                                         rowStyle: {
                                                                                             fontSize: 30,
                                                                                         },
-                                                                                        headerStyle: { color: "#fff", fontSize: 25, },
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, },
                                                                                     },
                                                                                     {
                                                                                         title: 'Authors of Evidence',
@@ -203,7 +203,7 @@ const symbolsForOptions = {
                                                                                         sorting: false,
                                                                                         align: "center",
                                                                                         cellStyle: { background: "	#72C430" },
-                                                                                        headerStyle: { color: "#fff", fontSize: 25, }
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, }
                                                                                     },
                                                                                     {
                                                                                         title: 'Source of Claim',
@@ -213,7 +213,7 @@ const symbolsForOptions = {
                                                                                         searching: false,
                                                                                         filtering: false,
                                                                                         cellStyle: { background: "#75CA9A" },
-                                                                                        headerStyle: { color: "#fff", fontSize: 25, }
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     },
                                                                                     {
@@ -223,7 +223,7 @@ const symbolsForOptions = {
                                                                                         SortArrow: 'arrow_upward',
                                                                                         defaultSort: "asc",
                                                                                         cellStyle: { background: "#FFB302" },
-                                                                                        headerStyle: { color: "#fff", fontSize: 25, }
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     },
                                                                                     {
@@ -235,7 +235,7 @@ const symbolsForOptions = {
 
                                                                                         align: "center",
                                                                                         cellStyle: { background: "#75CA9A" },
-                                                                                        headerStyle: { color: "#fff", fontSize: 25, }
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     },
                                                                                     {
@@ -246,7 +246,7 @@ const symbolsForOptions = {
                                                                                         align: "center",
                                                                                         lookup: { PQI: "Product Quality", CQI: "Code Quality", TSI: "Team-Satisfaction Quality" },
                                                                                         cellStyle: { background: "#3A9960" },
-                                                                                        headerStyle: { color: "#fff", fontSize: 25, }
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     },
                                                                                     {
@@ -258,7 +258,7 @@ const symbolsForOptions = {
                                                                                         lookup: { S: "Strong Support", W: "Weak Support" },
 
                                                                                         cellStyle: { background: "#DB3B3B" },
-                                                                                        headerStyle: { color: "#fff", fontSize: 25, }
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     }
 
