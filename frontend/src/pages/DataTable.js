@@ -74,7 +74,7 @@ const symbolsForOptions = {
                                                                                 />)
                                                                             };
                                                                             //Table created for storing and displaying all the necessary data concerning TDD
-                                                                            export const Table = () => {
+                                                                            export const DataTable = () => {
                                                                                 const [tableData, setTableData] = useState([{
                                                                                             ID: 1,
                                                                                             title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',

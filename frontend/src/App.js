@@ -1,44 +1,39 @@
+import { DataTable } from './pages/DataTable';
+import Home from "./pages/Home";
+import SEPractice from "./pages/SE-Practice";
+import SubmitArticle from "./pages/Submit-Article";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import NotFoundPage from "./pages/404";
+import NavigationBar from './components/NavigationBar'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import { Table } from './Table';
-/*
 
-const express = require('express');
-const connectDB = require('./config/db');
-var cors = require('cors');
-
-// routes
-const books = require('./routes/api/books');
-
-const app = express();
-
-// Connect Database
-connectDB();
-
-// cors
-app.use(cors({ origin: true, credentials: true }));
-
-// Init Middleware
-app.use(express.json({ extended: false }));
-
-app.get('/', (req, res) => res.send('Hello world!'));
-
-// use Routes
-app.use('/api/books', books);
-
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => console.log(`Server running on port ${3000}`));
-*/
 function App() {
-
-    return ( < div className = "App" >
+    return ( <
+        Router >
         <
-        h2 > < /h2> <Table / >
+        NavigationBar / >
         <
-
-
-        /div>
-
+        div className = 'max-w-screen-md mx-auto pt-20' >
+        <
+        Route exact path = "/"
+        component = { Home }
+        /> <
+        Route exact path = "/SE-Practice"
+        component = { SEPractice }
+        /> <
+        Route exact path = "/Submit-Article"
+        component = { SubmitArticle }
+        />  <
+        Route exact path = "/TDD"
+        component = { DataTable }
+        />  <
+        Route exact path = "/PageNotFound"
+        component = { NotFoundPage }
+        /> < /
+        div > < /
+        Router >
     );
 
 }
