@@ -201,7 +201,7 @@ const symbolsForOptions = {
                                                                                         title: 'Authors of Evidence',
                                                                                         field: 'authors',
                                                                                         sorting: false,
-                                                                                        grouping: false,
+                                                                                        grouping: true,
                                                                                         align: "center",
                                                                                         cellStyle: { background: "	#72C430" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
@@ -211,7 +211,7 @@ const symbolsForOptions = {
                                                                                         field: 'source',
                                                                                         sorting: false,
                                                                                         align: "center",
-                                                                                        grouping: false,
+                                                                                        grouping: true,
                                                                                         searching: false,
                                                                                         filtering: false,
                                                                                         cellStyle: { background: "#75CA9A" },
@@ -223,6 +223,7 @@ const symbolsForOptions = {
                                                                                         field: 'pubyear',
                                                                                         align: "",
                                                                                         SortArrow: 'arrow_upward',
+                                                                                        grouping: true,
                                                                                         defaultSort: "asc",
                                                                                         cellStyle: { background: "#FFB302" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
@@ -234,7 +235,7 @@ const symbolsForOptions = {
                                                                                         sorting: false,
                                                                                         searching: false,
                                                                                         filtering: false,
-                                                                                        grouping: false,
+                                                                                        grouping: true,
                                                                                         align: "center",
                                                                                         cellStyle: { background: "#75CA9A" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
