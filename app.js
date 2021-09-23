@@ -1,16 +1,16 @@
 const express = require('express');
 //const connectDB = require('./config/db');
 //var cors = require('cors');
+const app = express();
+
 
 //const path = require("path");
 //app.get("/", (req, res) => {
- //res.sendFile(path.join(__dirname, "build"));
+/// res.sendFile(path.join(__dirname, "build"));
 //});
 
 // routes
 
-
-const app = express();
 
 // Connect Database
 //connectDB();
@@ -19,12 +19,12 @@ const app = express();
 //app.use(cors({ origin: true, credentials: true }));
 
 // Init Middleware
-app.use(express.json({ extended: false }));
+//app.use(express.json({ extended: false }));
 
 // use Routes
 //app.use('/api/books', books);
 
-const port = process.env.PORT || 8082;
+const port = process.env.PORT || 8080;
 
 //if(process.env.NODE_ENV === 'production'){
     app.use(express.static('frontend/build'));
