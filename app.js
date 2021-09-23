@@ -6,9 +6,9 @@ const app = express();
 
 const path = require("path");
 
-app.get("/", (req, res) => {
- res.sendFile(path.join(__dirname, "/frontend/build"));
-});
+//app.get("/", (req, res) => {
+// res.sendFile(path.join(__dirname, "/frontend/build"));
+//});
 
 // routes
 
@@ -31,5 +31,5 @@ const port = process.env.PORT || 8080;
     app.use(express.static('frontend/build'));
 //}
 
-
+console.log('yo');
 app.listen(port, () => console.log(`Server running on port ${port}`));
