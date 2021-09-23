@@ -75,7 +75,7 @@ const symbolsForOptions = {
                                                                             };
                                                                             //Table created for storing and displaying all the necessary data concerning TDD
                                                                             export const Table = () => {
-                                                                                const tableData = [{
+                                                                                const [tableData, setTableData] = useState([{
                                                                                             ID: 1,
                                                                                             title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',
                                                                                             authors: "Munir, H., Wnuk, K., Petersen, K., Moayyed, M.",
@@ -151,8 +151,7 @@ const symbolsForOptions = {
                                                                                             doi: "https://doi.org/10.1007/978-3-030-36701-5_2",
                                                                                             claim: "CQI",
                                                                                             evidence: "W"
-                                                                                        },
-                                                                                        {
+                                                                                        }, {
                                                                                             ID: 8,
                                                                                             title: "Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions.",
                                                                                             authors: "Buchan, Ji., Li, L. & MacDonell, S. G",
@@ -161,8 +160,7 @@ const symbolsForOptions = {
                                                                                             doi: "https://doi.org/10.1109/apsec.2011.44",
                                                                                             claim: "TSI",
                                                                                             evidence: "W"
-                                                                                        },
-                                                                                        {
+                                                                                        }, {
                                                                                             ID: 9,
                                                                                             title: "Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions.",
                                                                                             authors: "Buchan, Ji., Li, L. & MacDonell, S. G",
@@ -172,7 +170,7 @@ const symbolsForOptions = {
                                                                                             claim: "PQI",
                                                                                             evidence: "W"
                                                                                         },
-                                                                                    ]
+                                                                                    ])
                                                                                     //may implement optional switch to change from light and dark modes
                                                                                 const [alterDarkMode, setAlterDarkMode] = useState(true)
                                                                                 const claimInfo = [{
@@ -181,6 +179,7 @@ const symbolsForOptions = {
                                                                                         sorting: true,
                                                                                         align: 'center',
                                                                                         filtering: false,
+                                                                                        grouping: false,
                                                                                         defaultSort: "asc",
                                                                                         cellStyle: { background: "#528AAE" },
                                                                                         rowStyle: {
@@ -191,6 +190,7 @@ const symbolsForOptions = {
                                                                                         title: 'Title of Evidence',
                                                                                         field: 'title',
                                                                                         sorting: false,
+                                                                                        grouping: false,
                                                                                         cellStyle: { background: "#528AAE" },
                                                                                         rowStyle: {
                                                                                             fontSize: 30,
@@ -201,6 +201,7 @@ const symbolsForOptions = {
                                                                                         title: 'Authors of Evidence',
                                                                                         field: 'authors',
                                                                                         sorting: false,
+                                                                                        grouping: true,
                                                                                         align: "center",
                                                                                         cellStyle: { background: "	#72C430" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
@@ -210,6 +211,7 @@ const symbolsForOptions = {
                                                                                         field: 'source',
                                                                                         sorting: false,
                                                                                         align: "center",
+                                                                                        grouping: true,
                                                                                         searching: false,
                                                                                         filtering: false,
                                                                                         cellStyle: { background: "#75CA9A" },
@@ -219,8 +221,9 @@ const symbolsForOptions = {
                                                                                     {
                                                                                         title: 'Year of Publication',
                                                                                         field: 'pubyear',
-                                                                                        align: "center",
+                                                                                        align: "",
                                                                                         SortArrow: 'arrow_upward',
+                                                                                        grouping: true,
                                                                                         defaultSort: "asc",
                                                                                         cellStyle: { background: "#FFB302" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
@@ -232,7 +235,7 @@ const symbolsForOptions = {
                                                                                         sorting: false,
                                                                                         searching: false,
                                                                                         filtering: false,
-
+                                                                                        grouping: true,
                                                                                         align: "center",
                                                                                         cellStyle: { background: "#75CA9A" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
@@ -279,6 +282,23 @@ const symbolsForOptions = {
                                                                                     <
                                                                                     MaterialTable data = { tableData }
                                                                                     columns = { claimInfo }
+                                                                                    editable = {
+                                                                                        {
+                                                                                            onRowAdd: (newRow) => new Promise((resolve, reject) => {
+                                                                                                setTableData([...tableData, newRow])
+                                                                                                setTimeout(() => resolve(), 500)
+
+                                                                                            }),
+                                                                                            onRowUpdate: (newRow, oldRow) => new Promise((resolve, reject) => {
+                                                                                                const claimUpdated = [...tableData]
+                                                                                                claimUpdated[oldRow.tableData.id] = newRow
+                                                                                                setTableData(claimUpdated)
+                                                                                                console.log(newRow, oldRow)
+                                                                                                setTimeout(() => resolve(), 500)
+                                                                                            })
+                                                                                        }
+                                                                                    }
+
                                                                                     icons = { symbolsForOptions }
                                                                                     options = {
                                                                                         {
@@ -289,8 +309,11 @@ const symbolsForOptions = {
                                                                                             filtering: true,
                                                                                             rowStyle: {
                                                                                                 fontSize: 15,
+                                                                                                fontStyle: 'Droid Sans',
                                                                                             },
-                                                                                            headerStyle: { background: "#5885AF", fontStyle: "oblique", fontSize: 15 }
+                                                                                            headerStyle: { background: "#003366", fontStyle: "oblique", fontSize: 15 },
+                                                                                            actionsColumnIndex: -1,
+                                                                                            grouping: true,
                                                                                         }
 
                                                                                     }
