@@ -282,6 +282,7 @@ const symbolsForOptions = {
                                                                                     <
                                                                                     MaterialTable data = { tableData }
                                                                                     columns = { claimInfo }
+                                                                                    /*
                                                                                     editable = {
                                                                                         {
                                                                                             onRowAdd: (newRow) => new Promise((resolve, reject) => {
@@ -298,7 +299,7 @@ const symbolsForOptions = {
                                                                                             })
                                                                                         }
                                                                                     }
-
+                                                                                       */
                                                                                     icons = { symbolsForOptions }
                                                                                     options = {
                                                                                         {
