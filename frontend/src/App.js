@@ -1,5 +1,3 @@
-import { AddBox, ArrowDownward } from "@material-ui/icons";
-
 
 import { Table } from './Table';
 /*
@@ -40,7 +38,6 @@ function App() {
 
 
         /div>
-
 
     );
 
