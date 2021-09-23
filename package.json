@@ -2,7 +2,7 @@
   "name": "speed_nbc_group10",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "build": "cd frontend && npm run build",
     "install-client": "cd frontend && npm install",
