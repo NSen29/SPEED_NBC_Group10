@@ -7,7 +7,7 @@ const Claims = require('./routes/api/Claims');
 
 const app = express();
 
-// Connect Database
+// Connect to Database
 connectDB();
 
 // cors
