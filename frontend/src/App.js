@@ -13,32 +13,29 @@ function App() {
     return ( <
         Router >
         <
-        Switch >
-        <
-        Route exact path = '/TDD'
+        Route exact path = "/TDD"
         component = { TDD }
-        />  < /
-        Switch > <
+        />  <
         NavigationBar / >
         <
         div className = 'max-w-screen-md mx-auto pt-20' >
         <
         Switch >
         <
-        Route exact path = '/'
+        Route exact path = "/"
         component = { Home }
         />  <
-        Route exact path = '/SE-Practice'
+        Route exact path = "/SE-Practice"
         component = { SEPractice }
-        />   <
-        Route exact path = '/Submit-Article'
+        />  <
+        Route exact path = "/Submit-Article"
         component = { SubmitArticle }
-        />   
-
-        <
-        /Switch > < /
+        />  <
+        Route component = { NotFoundPage }
+        /> <
+        /Switch> < /
         div > <
-        /Router > );
+        /Router >);
 
     }
 
