@@ -36,10 +36,10 @@ function App() {
         />   
 
         <
-        /Switch > < /
-        div > <
-        /Router > );
+        /Switch >  <
+        /div > < /
+        Router > );
 
-    }
+}
 
-    export default App;
+export default App;
