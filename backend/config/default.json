@@ -1,5 +1,0 @@
-// default.json
-
-{
-    "mongoURI": "mongodb+srv://Chris:groupten@cluster0.3e6jh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-}
