@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { TDD } from './pages/TDD';
 import Home from "./pages/Home";
 import SEPractice from "./pages/SE-Practice";
@@ -7,10 +8,13 @@ import NotFoundPage from "./pages/NotFoundPage";
 import NavigationBar from './components/NavigationBar'
 import React from 'react'
 import ReactDOM from 'react-dom'
+=======
 import { AddBox, ArrowDownward } from "@material-ui/icons";
 import { Table } from './Table';
+>>>>>>> main
 
 function App() {
+<<<<<<< HEAD
     return ( <
         Router >
         <
@@ -41,3 +45,14 @@ function App() {
     }
 
     export default App;
+=======
+  return (
+    <div className="App">
+      <h2>React-App</h2>
+      <Table/>
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> main
