@@ -7,7 +7,12 @@ import NotFoundPage from "./pages/NotFoundPage";
 import NavigationBar from './components/NavigationBar'
 import React from 'react'
 import ReactDOM from 'react-dom'
+<<<<<<< HEAD
 
+=======
+import { AddBox, ArrowDownward } from "@material-ui/icons";
+import { Table } from './Table';
+>>>>>>> parent of aaffd3e (Trial Frontend)
 
 function App() {
     return ( <
@@ -30,8 +35,13 @@ function App() {
         />  <
         Route exact path = "/Submit-Article"
         component = { SubmitArticle }
+<<<<<<< HEAD
         />  <
         Route component = { NotFoundPage }
+=======
+       // />  <
+       // Route component = { NotFoundPage }
+>>>>>>> parent of aaffd3e (Trial Frontend)
         /> <
         /Switch> < /
         div > <
@@ -39,4 +49,8 @@ function App() {
 
     }
 
+<<<<<<< HEAD
     export default App;
+=======
+    export default App;
+>>>>>>> parent of aaffd3e (Trial Frontend)
