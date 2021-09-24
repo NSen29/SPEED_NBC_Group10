@@ -30,8 +30,8 @@ function App() {
         />  <
         Route exact path = "/Submit-Article"
         component = { SubmitArticle }
-        />  <
-        Route component = { NotFoundPage }
+       // />  <
+       // Route component = { NotFoundPage }
         /> <
         /Switch> < /
         div > <

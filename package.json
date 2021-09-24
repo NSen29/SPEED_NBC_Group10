@@ -2,12 +2,19 @@
     "name": "speed_nbc_group10",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js, app.js",
+    "main": "app.js",
     "scripts": {
-        "start": "nodemon app.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "app": "nodemon app.js",
-        "nodemon": "./node_modules/.bin/nodemon"
+      "start": "node app.js",
+      "build": "cd frontend && npm run build",
+      "client": "cd frontend && npm start",
+      "heroku-postbuild": "npm run install-client && npm run build",
+      "install-client": "cd frontend && npm install",
+      "app": "nodemon app.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+      "npm": "6.14.13",
+      "node": "v14.17.3"
     },
     "repository": {
         "type": "git",
@@ -28,6 +35,7 @@
         "express": "^4.17.1",
         "material-table": "^1.69.3",
         "mongoose": "^6.0.7",
+        "react-router-dom": "^5.3.0",
         "react-table": "^7.7.0",
         "validation": "^0.0.1"
     },
