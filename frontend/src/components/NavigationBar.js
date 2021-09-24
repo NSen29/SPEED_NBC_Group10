@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const NavigationBar = () => {
-    return ( < nav className = "border-b-4 border-green-700 text-center fixed top-0 bg-green-600 front-bold text-lg text-white" >
+    return ( < nav className = 'border-b-4 border-blue-700 w-full text-center fixed top-0 w-full bg-blue-600 front-bold text-lg text-white' >
         <
         ul >
         <
@@ -17,14 +17,14 @@ const NavigationBar = () => {
         <
         Link to = "/Submit-Article"
         className = "pl-6 pr-8" >
-        SubmitArticle <
+        Submit an Article <
         /Link> < /
         li > <
         li className = "inline-block pt-4 pb-4" >
         <
-        Link to = "/SE-Practise"
+        Link to = "/SE-Practice"
         className = "pl-6 pr-8" >
-        SEPractice <
+        Software Engineering Practices <
         /Link>  < /
         li >
 

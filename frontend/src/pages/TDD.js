@@ -74,7 +74,7 @@ const symbolsForOptions = {
                                                                                 />)
                                                                             };
                                                                             //Table created for storing and displaying all the necessary data concerning TDD
-                                                                            export const DataTable = () => {
+                                                                            export const TDD = () => {
                                                                                 const [tableData, setTableData] = useState([{
                                                                                             ID: 1,
                                                                                             title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',
@@ -190,7 +190,7 @@ const symbolsForOptions = {
                                                                                         title: 'Title of Evidence',
                                                                                         field: 'title',
                                                                                         sorting: false,
-                                                                                        grouping: false,
+                                                                                        grouping: true,
                                                                                         cellStyle: { background: "#528AAE" },
                                                                                         rowStyle: {
                                                                                             fontSize: 30,
@@ -280,7 +280,8 @@ const symbolsForOptions = {
                                                                                     h3 align = 'center' > Software Engineering Practice < /h3>   <
                                                                                     MuiThemeProvider theme = { theme } >
                                                                                     <
-                                                                                    MaterialTable data = { tableData }
+                                                                                    MaterialTable title = "TEST DRIVEN DEVELOPMENT"
+                                                                                    data = { tableData }
                                                                                     columns = { claimInfo }
                                                                                     /*
                                                                                     editable = {
