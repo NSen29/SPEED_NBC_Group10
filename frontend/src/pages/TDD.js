@@ -304,6 +304,7 @@ const symbolsForOptions = {
                                                                                     icons = { symbolsForOptions }
                                                                                     options = {
                                                                                         {
+                                                                                            columnsButton: true,
                                                                                             sorting: true,
                                                                                             search: true,
                                                                                             searchFieldAlignment: 'right',
