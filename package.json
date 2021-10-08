@@ -5,14 +5,23 @@
     "main": "server.js, app.js",
     "scripts": {
         "start": "nodemon app.js",
+         "build": "cd frontend && npm run build",
+         "client": "cd frontend && npm start",
+         "heroku-postbuild": "npm run install-client && npm run build",
+         "install-client": "cd frontend && npm install",
         "test": "echo \"Error: no test specified\" && exit 1",
         "app": "nodemon app.js",
         "nodemon": "./node_modules/.bin/nodemon"
     },
+    "engines": {
+    "npm": "6.14.13",
+    "node": "v14.17.3"
+  },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/NSen29/SPEED_NBC_Group10.git"
     },
+    
     "author": "",
     "license": "ISC",
     "bugs": {
