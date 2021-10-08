@@ -10,14 +10,13 @@ import ReactDOM from 'react-dom'
 
 
 function App() {
-    return ( <
-        Router >
+    return ( < Router >
         <
         Switch >
         <
         Route exact path = '/TDD'
         component = { TDD }
-        />  < /
+        />   < /
         Switch > <
         NavigationBar / >
         <
@@ -27,7 +26,7 @@ function App() {
         <
         Route exact path = '/'
         component = { Home }
-        />  <
+        />   <
         Route exact path = '/SE-Practice'
         component = { SEPractice }
         />   <
@@ -36,8 +35,8 @@ function App() {
         />   
 
         <
-        /Switch >  <
-        /div > < /
+        /Switch >  < /
+        div > < /
         Router > );
 
 }

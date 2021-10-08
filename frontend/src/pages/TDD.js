@@ -77,18 +77,23 @@ const symbolsForOptions = {
                                                                             export const TDD = () => {
                                                                                 const [tableData, setTableData] = useState([{
                                                                                             ID: 1,
+                                                                                            practice: 'TDD',
+                                                                                            yearRange: 'LTY',
                                                                                             title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',
                                                                                             authors: "Munir, H., Wnuk, K., Petersen, K., Moayyed, M.",
                                                                                             source: "EASE",
                                                                                             pubyear: "2014",
                                                                                             doi: "https://doi.org/10.1145/2601248.2601267",
                                                                                             claim: "PQI",
+
                                                                                             evidence: "W"
 
                                                                                         },
 
                                                                                         {
                                                                                             ID: 2,
+                                                                                            practice: 'MP',
+                                                                                            yearRange: 'LTWEY',
                                                                                             title: 'Realizing quality improvement through test driven development: results and experiences of four industrial teams',
                                                                                             authors: "Nagappan, N., Maximilien, E. M., Bhat, T., Williams, L.",
                                                                                             source: " Empirical Software Engineering, 13(3), 289–302",
@@ -100,6 +105,8 @@ const symbolsForOptions = {
 
                                                                                         {
                                                                                             ID: 3,
+                                                                                            practice: 'TDD',
+                                                                                            yearRange: 'LTWEY',
                                                                                             title: "Does Test-Driven Development Really Improve Software Design Quality?",
                                                                                             authors: "Janzen, D. S.",
                                                                                             source: "Software, IEEE, 25(2) 77-84",
@@ -111,6 +118,8 @@ const symbolsForOptions = {
 
                                                                                         {
                                                                                             ID: 4,
+                                                                                            practice: 'MP',
+                                                                                            yearRange: 'LFY',
                                                                                             title: "Comparative Case Study on the Impact of Test-Driven Development on Program Design and Test Coverage",
                                                                                             authors: "Siniaalto, M., Abrahamsson, P.",
                                                                                             source: "ArXiv.Org, cs.SE, arXiv:1711.05082-284",
@@ -122,6 +131,8 @@ const symbolsForOptions = {
 
                                                                                         {
                                                                                             ID: 5,
+                                                                                            practice: 'UT',
+                                                                                            yearRange: 'LTWEY',
                                                                                             title: "Driving Software Quality: How Test-Driven Development Impacts Software Quality.",
                                                                                             authors: "Crispin, L",
                                                                                             source: "IEEE Software, 23(6), 70–71.",
@@ -133,6 +144,8 @@ const symbolsForOptions = {
 
                                                                                         {
                                                                                             ID: 6,
+                                                                                            practice: 'TDD',
+                                                                                            yearRange: 'LTWEY',
                                                                                             title: "Test-Driven Development as a Defect-Reduction Practice.",
                                                                                             authors: "Williams, L., Maximilien, E. M. & Vouk, M.",
                                                                                             source: "4th International Symposium on Software Reliability Engineering, 2003. ISSRE 2003, 34–45.",
@@ -144,6 +157,8 @@ const symbolsForOptions = {
 
                                                                                         {
                                                                                             ID: 7,
+                                                                                            practice: 'MP',
+                                                                                            yearRange: 'LTWOY',
                                                                                             title: "An Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.",
                                                                                             authors: "Choma, J., Guerra, E. M., Silva, T. S. da, Albuquerque, T., Albuquerque, V. G. & Zaina, L. M.",
                                                                                             source: "WBMA, 1106(1), 11–24.",
@@ -153,6 +168,8 @@ const symbolsForOptions = {
                                                                                             evidence: "W"
                                                                                         }, {
                                                                                             ID: 8,
+                                                                                            practice: 'R',
+                                                                                            yearRange: 'LTY',
                                                                                             title: "Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions.",
                                                                                             authors: "Buchan, Ji., Li, L. & MacDonell, S. G",
                                                                                             source: "18TH ASIA PACIFIC SOFTWARE ENGINEERING CONFERENCE 2012",
@@ -162,6 +179,8 @@ const symbolsForOptions = {
                                                                                             evidence: "W"
                                                                                         }, {
                                                                                             ID: 9,
+                                                                                            practice: 'UT',
+                                                                                            yearRange: 'LTY',
                                                                                             title: "Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions.",
                                                                                             authors: "Buchan, Ji., Li, L. & MacDonell, S. G",
                                                                                             source: "18TH ASIA PACIFIC SOFTWARE ENGINEERING CONFERENCE 2012",
@@ -176,10 +195,12 @@ const symbolsForOptions = {
                                                                                 const claimInfo = [{
                                                                                         ID: 'Article No:',
                                                                                         field: 'ID',
+                                                                                        filtering: false,
                                                                                         sorting: true,
                                                                                         align: 'center',
-                                                                                        filtering: false,
-                                                                                        grouping: false,
+
+
+
                                                                                         defaultSort: "asc",
                                                                                         cellStyle: { background: "#528AAE" },
                                                                                         rowStyle: {
@@ -187,11 +208,36 @@ const symbolsForOptions = {
                                                                                         },
                                                                                         headerStyle: { color: "#fff", fontSize: 50, },
                                                                                     }, {
+                                                                                        ID: 'Year Range',
+                                                                                        field: 'yearRange',
+
+                                                                                        sorting: false,
+                                                                                        lookup: { LTWOY: "2 years ago", LFY: "5 years ago", LTY: "10 years ago", LTWEY: "20 years ago" },
+
+
+                                                                                        cellStyle: { background: "#528AAE" },
+                                                                                        rowStyle: {
+                                                                                            fontSize: 30,
+                                                                                        },
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, },
+                                                                                    }, {
+                                                                                        ID: 'Software Engineering Practice',
+                                                                                        field: 'practice',
+
+                                                                                        sorting: false,
+                                                                                        lookup: { TDD: "TDD", MP: "Mob Programming", R: "Refactoring", UT: "Unit Testing" },
+
+                                                                                        cellStyle: { background: "#528AAE" },
+                                                                                        rowStyle: {
+                                                                                            fontSize: 30,
+                                                                                        },
+                                                                                        headerStyle: { color: "#fff", fontSize: 20, },
+                                                                                    }, {
                                                                                         title: 'Title of Evidence',
                                                                                         field: 'title',
-                                                                                        sorting: false,
-                                                                                        grouping: true,
-                                                                                        cellStyle: { background: "#528AAE" },
+                                                                                        sorting: true,
+                                                                                        filtering: false,
+                                                                                        cellStyle: { background: "" },
                                                                                         rowStyle: {
                                                                                             fontSize: 30,
                                                                                         },
@@ -200,21 +246,21 @@ const symbolsForOptions = {
                                                                                     {
                                                                                         title: 'Authors of Evidence',
                                                                                         field: 'authors',
-                                                                                        sorting: false,
-                                                                                        grouping: true,
+                                                                                        sorting: true,
+                                                                                        filtering: false,
                                                                                         align: "center",
-                                                                                        cellStyle: { background: "	#72C430" },
+                                                                                        cellStyle: { background: "	" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
                                                                                     },
                                                                                     {
                                                                                         title: 'Source of Claim',
                                                                                         field: 'source',
-                                                                                        sorting: false,
+                                                                                        sorting: true,
                                                                                         align: "center",
-                                                                                        grouping: true,
-                                                                                        searching: false,
                                                                                         filtering: false,
-                                                                                        cellStyle: { background: "#75CA9A" },
+                                                                                        searching: false,
+
+                                                                                        cellStyle: { background: "" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     },
@@ -223,30 +269,34 @@ const symbolsForOptions = {
                                                                                         field: 'pubyear',
                                                                                         align: "",
                                                                                         SortArrow: 'arrow_upward',
-                                                                                        grouping: true,
+
+
+                                                                                        sorting: true,
+                                                                                        filtering: false,
                                                                                         defaultSort: "asc",
-                                                                                        cellStyle: { background: "#FFB302" },
+                                                                                        cellStyle: { background: "" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     },
                                                                                     {
                                                                                         title: 'DOI',
                                                                                         field: 'doi',
-                                                                                        sorting: false,
+                                                                                        sorting: true,
                                                                                         searching: false,
                                                                                         filtering: false,
-                                                                                        grouping: true,
                                                                                         align: "center",
-                                                                                        cellStyle: { background: "#75CA9A" },
+                                                                                        cellStyle: { background: "" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
 
                                                                                     },
                                                                                     {
                                                                                         title: 'Claim Type for Improvement',
                                                                                         field: 'claim',
-                                                                                        sorting: false,
+                                                                                        sorting: true,
                                                                                         searching: false,
+                                                                                        grouping: false,
                                                                                         align: "center",
+                                                                                        filtering: false,
                                                                                         lookup: { PQI: "Product Quality", CQI: "Code Quality", TSI: "Team-Satisfaction Quality" },
                                                                                         cellStyle: { background: "#3A9960" },
                                                                                         headerStyle: { color: "#fff", fontSize: 20, }
@@ -257,7 +307,9 @@ const symbolsForOptions = {
                                                                                         field: 'evidence',
                                                                                         searching: false,
                                                                                         align: "center",
-                                                                                        sorting: false,
+                                                                                        sorting: true,
+                                                                                        grouping: false,
+                                                                                        filtering: false,
                                                                                         lookup: { S: "Strong Support", W: "Weak Support" },
 
                                                                                         cellStyle: { background: "#DB3B3B" },
@@ -276,11 +328,11 @@ const symbolsForOptions = {
                                                                                 return ( <
                                                                                     div >
                                                                                     <
-                                                                                    h1 align = "center" > TEST DRIVEN DEVELOPMENT < /h1>  <
-                                                                                    h3 align = 'center' > Software Engineering Practice < /h3>   <
+                                                                                    h1 align = "center" > SOFTWARE ENGINEERING PRACTICES < /h1>  <
+                                                                                    h3 align = 'center' > Select a practice from the dropdown below < /h3>   <
                                                                                     MuiThemeProvider theme = { theme } >
                                                                                     <
-                                                                                    MaterialTable title = "TEST DRIVEN DEVELOPMENT"
+                                                                                    MaterialTable title = "SPEED DATABASE"
                                                                                     data = { tableData }
                                                                                     columns = { claimInfo }
                                                                                     /*
@@ -316,7 +368,7 @@ const symbolsForOptions = {
                                                                                             },
                                                                                             headerStyle: { background: "#003366", fontStyle: "oblique", fontSize: 15 },
                                                                                             actionsColumnIndex: -1,
-                                                                                            grouping: true,
+                                                                                            grouping: false,
                                                                                         }
 
                                                                                     }
