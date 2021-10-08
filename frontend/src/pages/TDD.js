@@ -212,7 +212,7 @@ const symbolsForOptions = {
                                                                                         field: 'yearRange',
 
                                                                                         sorting: false,
-                                                                                        lookup: { LTWOY: "2 years ago", LFY: "5 years ago", LTY: "10 years ago", LTWEY: "20 years ago" },
+                                                                                        lookup: { LTWOY: "Last Two Years", LFY: "Last Five Years", LTY: "Last Ten Years", LTWEY: "Last Twenty Years" },
 
 
                                                                                         cellStyle: { background: "#528AAE" },
