@@ -25,7 +25,7 @@ app.use(express.json({ extended: false }));
 // use Routes
 app.use('/api/Claims', Claims);
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 //if(process.env.NODE_ENV === 'production'){
     app.use(express.static('./frontend/build'));
