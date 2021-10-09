@@ -1,10 +1,60 @@
-import React from "react";
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 import { Typography, Card, CardContent, Grid, TextField, Button } from '@material-ui/core'
 
 
-const SubmitArticle = () => {
-    return ( <
+class CreateArticle extends Component {
+  constructor() {
+    super();
+    this.state = {
+      title: '',
+      isbn:'',
+      author:'',
+      description:'',
+      published_date:'',
+      publisher:''
+    };
+  }
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+ 
+    const data = {
+      title: this.state.title,
+      isbn: this.state.isbn,
+      author: this.state.author,
+      description: this.state.description,
+      published_date: this.state.published_date,
+      publisher: this.state.publisher
+    };
+
+    axios
+      .post('mongodb+srv://Chris:groupten@cluster0.3e6jh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', data)
+      .then(res => {
+        this.setState({
+          title: '',
+          isbn:'',
+          author:'',
+          description:'',
+          published_date:'',
+          publisher:''
+        })
+        this.props.history.push('/');
+      })
+      .catch(err => {
+        console.log("Error in CreateBook!");
+      })
+  };
+
+
+
+render(){
+    return (<
         div >
         <
         h2 className = 'sm:text-4xl text-2xl font-bold mt-6 text-gray-900' > Submit Article < /h2>    <
@@ -73,20 +123,28 @@ const SubmitArticle = () => {
         <
         /Grid>  <
         Grid xs = { 12 }
-        item > <
+        item > 
+        
+        <
         Button variant = "contained"
         component = "label" >
+        
         Upload File <
         input type = "file"
-        hidden /
-        >
-        <
-        /Button> <
-        Button type = "submit"
+        hidden />
+      
+        </Button> 
+
+        <Button 
+        onClick = {this.onSubmit} 
+        type = "submit"
         variant = "contained"
         color = "primary"
-        fullWidth > Submit < /Button> < /
-        Grid >
+        fullWidth 
+        > Submit 
+        < /Button> 
+        
+        < /Grid >
 
 
         <
@@ -95,7 +153,9 @@ const SubmitArticle = () => {
         / CardContent > < /
         Card > < /
         div >
+        
     );
 }
+}
 
-export default SubmitArticle;
+export default CreateArticle;

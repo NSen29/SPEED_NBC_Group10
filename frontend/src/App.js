@@ -32,7 +32,12 @@ function App() {
         />   <
         Route exact path = '/Submit-Article'
         component = { SubmitArticle }
-        />   
+        />   <
+        Route exact path = '/Submit-Article?'
+        component = { Home }
+        />
+        
+        
 
         <
         /Switch >  < /
