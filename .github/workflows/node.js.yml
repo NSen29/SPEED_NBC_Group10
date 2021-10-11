@@ -27,7 +27,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-
+    - name: Install Frontend-dependencies
+      run: cd frontend && npm install
 
     - name: Build
       run: npm run build
