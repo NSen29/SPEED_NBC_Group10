@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: NSen29/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{07b19de1-a503-4695-93f8-7e0d5b3101f4}}
+          heroku_app_name: "group10seper" #Must be unique in Heroku
+          heroku_email: "dxw8966@aut.ac.nz"
