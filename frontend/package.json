@@ -23,7 +23,7 @@
         "watch:css": "postcss src/styles/index.css -o src/styles/tailwind.css --watch",
         "react-scripts:start": "react-scripts start",
         "start": "react-scripts start run-p watch:css ",
-        "build": "react-scripts build run-s build:css",
+        "build": "CI=false && react-scripts build run-s build:css",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
